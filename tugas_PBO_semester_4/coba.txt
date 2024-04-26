@@ -1,0 +1,98 @@
+Opsi | 2D           | 3D
+        - Segitiga
+                    - Limas
+                    - Prisma
+        - Persegi   
+                    - Limas
+                    - Prisma
+        - Lingkaran 
+                    - tabung
+                    - kerucut
+                    - Bola
+========================================================================
+
+// Alur Program
+// 2 Dimension
+        user ketemu opsi mau menghitung bangun apa.
+        user memilih dan mulai memasukan nilai                          // star
+        user mendapatkan nilai 2D yang diinginkan
+                
+        user bisa kembali ke MAIN MENU saat di menu 2D.
+
+// 3 Dimension  
+        user ketemu opsu mau mengitung bangun apa.
+        user memilih dan mulai memasukan nilai                          // star
+        user mendapatkan nilai 3D                                       // star
+        user bisa kembali ke MAIN MENU.
+
+overloading
+        void hitungPersegi3D(float sisi){
+                input tinggiPersegi
+                BalokPersegi kotak3D = new BalokPersegi(sisi, tinggiPersegi);
+        }
+        void hitungPersegi3D(){
+                input sisi;
+                input tinggiPersegi;
+                BalokPersegi kotak3D = new BalokPersegi(sisi, tinggiPersegi);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------- Review Setelah penjelasan pak Novrido .
+
+Persegi abc = new Persegi();
+
+DuaDimensi persegi = new DuaDimensi();
+persegi.HitungLuasKeliling(... .... .... ...)
+persegi.HitungLuasKelilingPersegi(... .... .... ...)
+
+interface DuaDimensi{
+        abst HitungLuasKelilingPersegi(..., ...)
+        abst HitungLuasKelilingPersegiPanjang(..., ..., ...)
+        .....dibuat banyak....
+}
+
+abstr class DuaDimensi implements DuaDimensi
+        float luas, keliling            // semuanya punya
+
+
+        getLuas(){
+                retun luas;
+        }  
+        getKeliling(){
+                retun keliling;
+        }  
+
+abst class TigaDimensi extends DuaDimensi
+        privat float volume, luasPermukaan, tinggi;
+
+        abst HitungLuasPermukaanDanVolumePrismaPersegi(...){
+                HitungLuasKeliling(...);
+                .... lanjutan ....
+        }
+        abst HitungLuasPermukaanDanVolumePrismaPersegiPanjang(...){
+                HitungLuasKeliling(...);
+                .... lanjutan ....
+        }
+        abst HitungLuasPermukaanDanVolume(...){
+                HitungLuasKeliling(...);
+                .... lanjutan ....
+        }
+        .... lanjut ....
+
+        getLuasPermukaan(){
+                return
+        }
+        getVolume(){
+                return 
+        }
